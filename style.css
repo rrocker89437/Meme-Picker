@@ -62,6 +62,7 @@ h2 {
 }
 
 h3 {
+  font-size: var(--fs-lg);
   margin: 25px;
 }
 
@@ -98,7 +99,10 @@ main {
       position: relative;
       width: 500px;
       height: 500px;
-      border: 1px solid var(--border-2);
+      border: 1px solid var(--border-3);
+      border-radius: 25px;
+
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.452);
 
       #images-container-inner {
         display: grid;
@@ -109,6 +113,10 @@ main {
           margin: auto auto;
           grid-column: 2 / 3;
           grid-row: 2 / 3;
+
+          max-width: 400px;
+          max-height: 400px;
+          border-radius: 5px;
         }
       }
 
@@ -171,56 +179,22 @@ main {
       .get-image-btn {
         margin-bottom: 8px;
         padding: 15px 19px;
-        background-color: var(--bg-main);
-        color: var(--clr-main);
+        background-color: var(--bg-tertiary);
+        color: var(--clr-white);
         font-size: var(--fs-md);
-        border: none;
+        border: 2px solid var(--bg-tertiary);
         border-radius: 5px;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--bg-transparent);
+          border: 2px solid var(--bg-tertiary);
+          color: var(--clr-black);
+        }
       }
     }
   }
-}
-
-/* Modal */
-.meme-modal {
-  position: fixed;
-  top: 80px;
-  left: 0;
-  right: 0;
-  display: none; /*flex when displayed*/
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-2);
-  border-radius: 5px;
-  width: 420px;
-  height: 490px;
-
-  .meme-modal-close-btn {
-    position: absolute;
-    top: 2%;
-    right: 2%;
-    padding: 2px 6px;
-    font-size: var(--fs-xs);
-    background-color: var(--bg-transparent);
-    border: 2px solid var(--border-3);
-    border-radius: 50%;
-    color: var(--clr-tertiary);
-    cursor: pointer;
-
-    &:hover {
-      background-color: var(--bg-tertiary);
-      color: var(--clr-white);
-      border: 2px solid var(--border-4);
-    }
-  }
-}
-
-.cat-img {
-  max-width: 400px;
-  max-height: 400px;
-  border-radius: 5px;
 }
 
 .highlight {
