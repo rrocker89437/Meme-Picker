@@ -98,6 +98,17 @@ main {
       flex-direction: column;
       border: 1px solid var(--border-1);
       border-radius: 5px;
+
+      .radio {
+        display: flex;
+        align-items: center;
+        padding: 4px 8px;
+        border-bottom: 1px solid var(--border-1);
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
     }
 
     .gifs-check {
@@ -163,17 +174,6 @@ main {
   max-width: 340px;
   max-height: 420px;
   border-radius: 5px;
-}
-
-.radio {
-  display: flex;
-  align-items: center;
-  padding: 4px 8px;
-  border-bottom: 1px solid var(--border-1);
-
-  &:last-child {
-    border-bottom: none;
-  }
 }
 
 .highlight {
